@@ -1,0 +1,28 @@
+<%- include("..//partials/header") %>
+
+<div class="row">
+	<div id="profileColumn" class="col-md-4">
+		<h1><%=user.firstName + " " + user.lastName%></h1>
+		<div class="thumbnail">
+			<img src="<%=user.avatar%>" alt="user profile picture">
+			<div class="caption"><a href="mailto:<%=user.email%>"><%=user.email%></a></div>
+		</div>
+		<p>Haunted trick-or-treat black cat cauldron chainsaw witch nightmare. Scare boo witch vampire nightmare scare skeleton. Trick-or-treat afraid black cat vampire black cat spooky mummy. Abomination scare monster werewolf black cat drive-in drive-in. Candy black cat monster pumpkin chainsaw vampire drive-in.</p>
+		<p>Haunted trick-or-treat black cat cauldron chainsaw witch nightmare. Scare boo witch vampire nightmare scare skeleton. Trick-or-treat afraid black cat vampire black cat spooky mummy. Abomination scare monster werewolf black cat drive-in drive-in. Candy black cat monster pumpkin chainsaw vampire drive-in.</p>
+	</div>
+	<div class="col.md-8">
+		<div class="container">
+			<h3><%=user.firstName%>'s campgrounds:</h3>
+			<ul>
+				<% campgrounds.forEach(function(campground) {%>
+				<li>
+					<a href="/campgrounds/<%= campground.id %>"><%-campground.name %></a>
+					<!-- <img src="<%=campground.image%>" alt="campground image"> -->
+				</li>
+				<% }); %>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<%- include("../partials/footer") %>

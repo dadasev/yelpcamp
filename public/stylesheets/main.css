@@ -1,0 +1,25 @@
+.thumbnail img {
+	width: 100%;
+}
+
+.thumbnail {
+	padding: 0;
+}
+
+.delete-form {
+	display: inline;
+}
+
+#avatar {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	border-radius: 100px;
+	border: 1px solid grey;
+	margin: 0;
+	padding: 0;
+}
+
+#profileColumn {
+	padding-right: 30px;
+}
