@@ -15,13 +15,24 @@ const express    = require("express"),
 const campgroundRoutes = require("./routes/campgrounds"),
 	  commentRoutes    = require("./routes/comments"),
 	  indexRoutes      = require("./routes/index");
-	  
-mongoose.set('useNewUrlParser', true);
-mongoose.set('useFindAndModify', false);
-mongoose.set('useCreateIndex', true);
-mongoose.set('useUnifiedTopology', true);
 
-mongoose.connect("mongodb://localhost/yelp_camp");
+mongoose.connect("mongodb+srv://andrius:ax2VLbUkiH4dH6NX@cluster0-j7vy3.mongodb.net/test?retryWrites=true&w=majority", {
+	useNewUrlParser: true,
+	useFindAndModify: false,
+	useCreateIndex: true,
+	useUnifiedTopology: true
+}).then(() => {
+	console.log("Connected to DB Atlas!");
+}).catch(err => {
+	console.log("ERROR:", err.message);
+});
+
+// mongoose.set('useNewUrlParser', true);
+// mongoose.set('useFindAndModify', false);
+// mongoose.set('useCreateIndex', true);
+// mongoose.set('useUnifiedTopology', true);
+
+// mongoose.connect("mongodb://localhost/yelp_camp");
 
 app.set("view engine", "ejs");
 
@@ -57,6 +68,11 @@ app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 app.use("/", indexRoutes);
 
-app.listen(3000, function() { 
-  console.log('Server listening on port 3000'); 
+var port = process.env.PORT || 3000;
+app.listen(port, function () {
+  console.log("Server listening on port 3000");
 });
+
+// app.listen(3000, function() { 
+//   console.log('Server listening on port 3000'); 
+// });
