@@ -16,7 +16,9 @@ const campgroundRoutes = require("./routes/campgrounds"),
 	  commentRoutes    = require("./routes/comments"),
 	  indexRoutes      = require("./routes/index");
 
-mongoose.connect("mongodb+srv://andrius:ax2VLbUkiH4dH6NX@cluster0-j7vy3.mongodb.net/test?retryWrites=true&w=majority", {
+console.log(process.env.DATABASEURL);
+
+mongoose.connect(process.env.DATABASEURL, {
 	useNewUrlParser: true,
 	useFindAndModify: false,
 	useCreateIndex: true,
@@ -26,6 +28,18 @@ mongoose.connect("mongodb+srv://andrius:ax2VLbUkiH4dH6NX@cluster0-j7vy3.mongodb.
 }).catch(err => {
 	console.log("ERROR:", err.message);
 });
+
+
+// mongoose.connect("mongodb+srv://andrius:ax2VLbUkiH4dH6NX@cluster0-j7vy3.mongodb.net/test?retryWrites=true&w=majority", {
+// 	useNewUrlParser: true,
+// 	useFindAndModify: false,
+// 	useCreateIndex: true,
+// 	useUnifiedTopology: true
+// }).then(() => {
+// 	console.log("Connected to DB Atlas!");
+// }).catch(err => {
+// 	console.log("ERROR:", err.message);
+// });
 
 // mongoose.set('useNewUrlParser', true);
 // mongoose.set('useFindAndModify', false);
