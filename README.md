@@ -6,7 +6,7 @@ Built using JS, MongoDB, Express and various middleware.
 It has user authentication, basic authorization, CRUD operations, follows RESTful convention.
 
 Deployed to Heroku: 
-safe-stream-93835.herokuapp.com/
+https://safe-stream-93835.herokuapp.com/
 
 Features
 Authentication:
