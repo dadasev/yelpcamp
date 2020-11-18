@@ -1,61 +1,61 @@
 # YELPCAMP
 A Yelp clone for Campgrounds.
-Built using JS, MongoDB, Express and various middleware. 
+
+Built using JS, MongoDB, Express and various middleware.
+
 It has user authentication, basic authorization, CRUD operations, follows RESTful convention.
-It's deployed to Heroku: 
+
+Deployed to Heroku: 
 safe-stream-93835.herokuapp.com/
 
 Features
 Authentication:
 
-User login with username and password
+* User login with username and password;
 
-Admin sign-up with admin code
+* Admin sign-up with admin code;
 
 Authorization:
 
-One cannot manage posts and view user profile without being authenticated
+* One cannot manage posts and view user profile without being authenticated
 
-One cannot edit or delete posts and comments created by other users
+* One cannot edit or delete posts and comments created by other users
 
-Admin can manage all posts and comments
+* Admin can manage all posts and comments
 
-Manage campground posts with basic functionalities:
+* Manage campground posts with basic functionalities:
 
-Create, edit and delete posts and comments
+* Create, edit and delete posts and comments
 
-Upload campground photos
+* Upload campground photos
 
 Manage user account with basic functionalities:
 
-Profile page setup with sign-up
+* Profile page setup with sign-up
 
-Flash messages responding to users' interaction with the app
+* Flash messages responding to users' interaction with the app
 
-Responsive web design
+* Responsive web design
 
 Custom Enhancements
-Update campground photos when editing campgrounds
-Update personal information on profile page
+* Update campground photos when editing campgrounds
+* Update personal information on profile page
+
 Built with
 
 Front-end:
-  ejs
-  Google Maps APIs
-  Bootstrap
+* Bootstrap
+
 Back-end:
-  express
-  mongoDB
-  mongoose
-  async
-  crypto
-  helmet
-  passport
-  passport-local
-  express-session
-  method-override
-  nodemailer
-  moment
-  cloudinary
-  geocoder
-  connect-flash
+* express
+* mongoDB
+* mongoose
+* async
+* passport
+* passport-local
+* express-session
+* method-override
+* nodemailer
+* moment
+* geocoder
+* connect-flash
